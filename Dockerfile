@@ -16,6 +16,5 @@ COPY . .
 # Expose port 5000 for the Flask application
 EXPOSE 5000
 
-
 # Command to run your Flask application
 CMD ["python", "backend.py"]
