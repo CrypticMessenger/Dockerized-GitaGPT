@@ -1,11 +1,12 @@
 import streamlit as st
 import requests
 
+# Page Config
 st.set_page_config(page_title="Gita GPT",page_icon=":peacock:")
 assistant_avatar = "✨"
 user_avatar = "🙏"
 
-# Inference URL
+# Inference, test, test_args URLs
 inference_url = "http://127.0.0.1:40000/enlighten"
 test_url = "http://127.0.0.1:40000/test"
 test_args_url = "http://127.0.0.1:40000/test_args"
@@ -13,6 +14,7 @@ test_args_url = "http://127.0.0.1:40000/test_args"
 
 
 st.title("Gita's Streamlit App 🦚🕉️")
+st.markdown("This is a demo of a chatbot trained on the Bhagavad Gita. It uses the [Llama-2-7b-chat-hf](https://huggingface.co/meta-llama/Llama-2-7b-chat-hf) model.")
 
 with st.sidebar:
     st.title('🦙💬 Gita Chatbot')
@@ -21,7 +23,7 @@ with st.sidebar:
     st.markdown('📖 Learn how to build this app in this [blog](https://blog.streamlit.io/how-to-build-a-llama-2-chatbot/)!')
 
 
-# Store LLM generated responses
+# Store Chat history generated responses
 if "messages" not in st.session_state.keys():
     st.session_state.messages = [{"role": "assistant", "content": "Hare Krishna! I am Gita, a chatbot trained on the Bhagavad Gita. How may I assist you today?"}]
 
@@ -55,11 +57,10 @@ def generate_gita_response(prompt):
     params ={"top_p":top_p, "max_length":max_length, "repetition_penalty":1, "prompt": final_prompt }
     sz = len(final_prompt)
 
+    # Uncomment to test if the server is running
     # print(requests.get(test_args_url, params=params).text)
 
-    # response = requests.get(test_args_url, params=params).text[sz:]
     response = requests.get(inference_url, params=params).text[sz:]
-
     return response
 
 # User-provided prompt
