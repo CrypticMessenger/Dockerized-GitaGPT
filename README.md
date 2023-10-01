@@ -13,7 +13,6 @@
 - [x] Create Kubernetes manifest files to host the web server.
 - [x] BONUS: Dockerhub image is available for both arm64 and amd64 architectures(used github actions), making it more universal.
 - [x] BONUS: deployed frontend on cloud using streamlit sharing. (https://rapidfort.streamlit.app/)
-- [ ] BONUS: Tried to deployed backend on Azure using student credits ($100) but requires premium suite due to high memory requirements. (16 GB RAM, 4 CPU cores)
 - [x] BONUS: Maintained high standards of code quality: using enviroment variables and saved coding time by using open-sourced templates.
 - [x] PERSONAL ACHIEVEMENT: boosted testing time by downloading model once locally and then transfering it to container using, thus avoiding downloading it everytime the container is run: (expected time reduced from 50 minutes to 5-7 minutes)
 
@@ -64,18 +63,12 @@ chmod +x run.sh
 streamlit run frontend.py --server.port 8502
 ```
 
-- hosted frontend on cloud using streamlit sharing, link is given below:
+- hosted frontend on cloud using streamlit sharing, link: https://rapidfort.streamlit.app/
 
-```bash
-https://rapidfort.streamlit.app/
-```
 
 - [CAUTION] remember the llama2 model is very intensive and requires a lot of memory(13GB+). so, if you are running it on a local machine, it might crash. so, it is recommended to run it on a cloud instance, through google colab. the link to the colab notebook is given below, doing same thing as in `backend.py` but in cloud(without frontend):
-  follow this article to generate HF_TOKEN: https://huggingface.co/blog/llama2
-
-```bash
-https://colab.research.google.com/drive/1XQ36LZJ_znkBaqkhHWivyYWbYpFdkxcG?usp=sharing
-```
+  follow this article to generate HF_TOKEN(https://huggingface.co/blog/llama2)<br/>
+Collab link: https://colab.research.google.com/drive/1XQ36LZJ_znkBaqkhHWivyYWbYpFdkxcG?usp=sharing
 
 ### Kubernetes
 
