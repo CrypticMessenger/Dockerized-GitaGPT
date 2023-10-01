@@ -3,25 +3,27 @@ from flask import Flask, request
 from transformers import AutoTokenizer
 import transformers
 import torch
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 
-load_dotenv()
+# load_dotenv()
 
 app = Flask(__name__)
-app.config['HF_ACCESS_TOKEN'] = os.getenv('HF_ACCESS_TOKEN')
-app.config['BACKEND_PORT'] = os.getenv('BACKEND_PORT')
+hf_access_token = os.environ.get('HF_ACCESS_TOKEN')
+# hf_access_token = "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"
+
+
 
 
 model = "meta-llama/Llama-2-7b-chat-hf"
 
-tokenizer = AutoTokenizer.from_pretrained(model, token = app.config['HF_ACCESS_TOKEN'])
+tokenizer = AutoTokenizer.from_pretrained(model, token = hf_access_token)
 pipeline = transformers.pipeline(
     "text-generation",
     model=model,
     torch_dtype=torch.float16,
     device_map="auto",
-    token=app.config['HF_ACCESS_TOKEN']
+    token=hf_access_token
 )
 
 @app.route('/test_args', methods=['GET'])
@@ -56,4 +58,4 @@ def enlighten():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=app.config['BACKEND_PORT'])
+    app.run(debug=True, port=40000)

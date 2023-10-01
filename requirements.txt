@@ -1,0 +1,6 @@
+accelerate
+psutil
+Flask
+huggingface-hub
+torch
+transformers

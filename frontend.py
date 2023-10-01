@@ -6,9 +6,9 @@ assistant_avatar = "✨"
 user_avatar = "🙏"
 
 # Inference URL
-inference_url = "http://127.0.0.1:5000/enlighten"
-test_url = "http://127.0.0.1:5000/test"
-test_args_url = "http://127.0.0.1:5000/test_args"
+inference_url = "http://127.0.0.1:40000/enlighten"
+test_url = "http://127.0.0.1:40000/test"
+test_args_url = "http://127.0.0.1:40000/test_args"
 
 
 

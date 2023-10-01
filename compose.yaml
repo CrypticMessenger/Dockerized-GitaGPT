@@ -9,10 +9,14 @@
 # https://github.com/docker/awesome-compose
 services:
   server:
+    container_name: rapidfort
     build:
       context: .
     ports:
-      - 5000:5000
+      - 40000:40000
+    environment:
+      - HF_ACCESS_TOKEN=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
+      - BACKEND_PORT=40000
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
