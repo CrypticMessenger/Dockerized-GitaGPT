@@ -1,7 +1,7 @@
 docker build --tag rapidfort .   
 docker run -e HF_ACCESS_TOKEN=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 -p 40000:40000 rapidfort
 
-docker cp ~/.cache/huggingface 1e114e05f431bb27b0ed0c92a94711b022e1141aa578498f62ff34508c1cdb5d:/root/.cache/
+docker cp ~/.cache/huggingface 09f1dc055b8e02521955c27659e2c9deb7bb8a3a07688e98f4a4686e3ffdc763:/root/.cache/
 
 
 works

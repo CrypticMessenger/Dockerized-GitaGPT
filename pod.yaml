@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  #  name: bb-demo
+  name: gita108
+  namespace: default
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      #  bb: web
+      gitagpt: web
+  template:
+    metadata:
+      labels:
+        gitagpt: web
+    spec:
+      containers:
+        - name: gitagpt-site
+        # 
+          image: rapidfort
+          imagePullPolicy: Never
+          env:
+            - name: HF_ACCESS_TOKEN
+              value: "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"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: gita-entrypoint
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    gitagpt: web
+  ports:
+    - port: 40000
+      targetPort: 40000
+      nodePort: 30001

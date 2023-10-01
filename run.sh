@@ -9,7 +9,7 @@ HF_ACCESS_TOKEN=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
 
 # Check if the container is already running
 if [ "$(docker ps -q -f name=${CONTAINER_NAME})" ]; then
-    echo "[+] Container ${CONTAINER_NAME} is already running."
+    echo "[-] Container ${CONTAINER_NAME} is already running."
     exit 0
 fi
 
