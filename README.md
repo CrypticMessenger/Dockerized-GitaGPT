@@ -4,13 +4,13 @@
 
 ## [Highlights & Tasks](#Highlights)
 
-- [x] Create a repo and store your program on GitHub or Bitbucket.
-- [x] Documentation.
-- [x] Add a simple UI to this web application.
-- [x] Dockerize the application.
-- [x] Add a GitHub actions or equivalent pipeline to build a docker container.
-- [x] Create a bash script with instructions to run the container.
-- [x] Create Kubernetes manifest files to host the web server.
+- [x] Task-1: Create a repo and store your program on GitHub or Bitbucket. (https://github.com/CrypticMessenger/rapidfort)
+- [x] Task-2: Documentation. (`README.md`)
+- [x] Task-3: Add a simple UI to this web application. (`frontend.py`)
+- [x] Task-4: Dockerize the application. (`Dockerfile`)
+- [x] Task-5: Add a GitHub actions or equivalent pipeline to build a docker container. (`.github/workflows/main.yml`)
+- [x] Task-6: Create a bash script with instructions to run the container. (`run.sh`)
+- [x] Task-7: Create Kubernetes manifest files to host the web server. (`pod.yaml`)
 - [x] BONUS: Dockerhub image is available for both arm64 and amd64 architectures(used github actions), making it more universal.
 - [x] BONUS: deployed frontend on cloud using streamlit sharing. (https://rapidfort.streamlit.app/)
 - [x] BONUS: Maintained high standards of code quality: using enviroment variables and saved coding time by using open-sourced templates.
@@ -65,10 +65,9 @@ streamlit run frontend.py --server.port 8502
 
 - hosted frontend on cloud using streamlit sharing, link: https://rapidfort.streamlit.app/
 
-
 - [CAUTION] remember the llama2 model is very intensive and requires a lot of memory(13GB+). so, if you are running it on a local machine, it might crash. so, it is recommended to run it on a cloud instance, through google colab. the link to the colab notebook is given below, doing same thing as in `backend.py` but in cloud(without frontend):
   follow this article to generate HF_TOKEN(https://huggingface.co/blog/llama2)<br/>
-Collab link: https://colab.research.google.com/drive/1XQ36LZJ_znkBaqkhHWivyYWbYpFdkxcG?usp=sharing
+  Collab link: https://colab.research.google.com/drive/1XQ36LZJ_znkBaqkhHWivyYWbYpFdkxcG?usp=sharing
 
 ### Kubernetes
 
