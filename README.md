@@ -31,6 +31,12 @@ docker cp ~/.cache/huggingface <container_id>:/root/.cache/
 
 ### [Installation](#installation)
 
+- Clone the repo using following command:
+
+```bash
+https://github.com/CrypticMessenger/rapidfort.git
+```
+
 - Run `run.sh` using following command:
 
 ```bash
