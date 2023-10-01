@@ -10,7 +10,7 @@ import torch
 
 app = Flask(__name__)
 hf_access_token = os.environ.get('HF_ACCESS_TOKEN')
-# hf_access_token = "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"
+
 
 
 
