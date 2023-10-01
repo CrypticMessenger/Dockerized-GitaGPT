@@ -2,7 +2,7 @@
 
 1. [Screenshots](#Screenshots)
    <br/>
-   <img src="/img/frontend.png" width = "200" height = "200"/>
+   <img src="/img/frontend.png" width = "600" height = "400"/>
    <!-- ![img](/img/frontend.png) -->
 
 ## [Highlights & Tasks](#Highlights)
