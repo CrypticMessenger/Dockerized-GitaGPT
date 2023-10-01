@@ -1,6 +1,9 @@
 # README
 
 1. [Screenshots](#Screenshots)
+   <br/>
+   <img src="/img/frontend.png" width = "200" height = "200"/>
+   <!-- ![img](/img/frontend.png) -->
 
 ## [Highlights & Tasks](#Highlights)
 
