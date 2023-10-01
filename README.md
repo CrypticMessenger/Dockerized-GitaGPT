@@ -38,7 +38,7 @@ docker cp ~/.cache/huggingface <container_id>:/root/.cache/
 - Clone the repo using following command:
 
 ```bash
-https://github.com/CrypticMessenger/rapidfort.git
+https://github.com/CrypticMessenger/LlamaYogi.git
 ```
 
 - Run `run.sh` using following command:
