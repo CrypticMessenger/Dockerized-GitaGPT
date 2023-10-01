@@ -1,2 +1,5 @@
 docker build --tag rapidfort .   
 docker run -e HF_ACCESS_TOKEN=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 -p 40000:40000 rapidfort
+
+
+works
